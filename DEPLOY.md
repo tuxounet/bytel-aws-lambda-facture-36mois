@@ -98,25 +98,24 @@ Entrer dans le service API Gateway
         -         Endpoint Type : Regional
         -         Puis Create API
 3.      Dans ressources
-
-  -      Cliquez sur actions > Create ressources
-  -      Ressources name : factures
-  -      Enable cors : coché
-  -      Create ressources
+        -      Cliquez sur actions > Create ressources
+        -      Ressources name : factures
+        -      Enable cors : coché
+        -      Create ressources
   
 4.      Dans la ressource factures
-  a.      Cliquer sur actions > create method
-  b.      Selectionner le verbe post , puis le bouton valider
-  c.      Integration type :  "lambda"
-  d.      Cocher la case "use proxy lambda integration"
-  e.      Lambda function , saisir/selectionner jivaros-factures-hackathon18
-  f.      Puis cliquer sur save
-  g.      A l'avertissement d'ajout de permission, cliquer sur OK
+  -      Cliquer sur actions > create method
+  -      Selectionner le verbe post , puis le bouton valider
+  -      Integration type :  "lambda"
+  -      Cocher la case "use proxy lambda integration"
+  -      Lambda function , saisir/selectionner jivaros-factures-hackathon18
+  -      Puis cliquer sur save
+  -      A l'avertissement d'ajout de permission, cliquer sur OK
   
 5.      Dans le verbe post
 
-  a.      Faire un test avec pour request body {}
-  b.      Resultat attendu :
+  -      Faire un test avec pour request body {}
+  -      Resultat attendu :
           ```json
           {
             "isError": true,
@@ -126,14 +125,14 @@ Entrer dans le service API Gateway
           }
           ```
 6.      Dans le menu actions
-  a.      Cliquez sur "deploy api"
-  b.      Deployment stage , create new stage
-  c.      Stage name: prod
-  d.      Récupérer l'url dans le bandeau
+  -      Cliquez sur "deploy api"
+  -      Deployment stage , create new stage
+  -      Stage name: prod
+  -      Récupérer l'url dans le bandeau
  
 7.      Tester dans postman
-  a.      URL :  https://XXXXXXXXXXX.execute-api.eu-west-1.amazonaws.com/prod/factures (remplacer par l’url recuperé au point 6)
-  b.      Headers : Content-type : application/json
+  -      URL :  https://XXXXXXXXXXX.execute-api.eu-west-1.amazonaws.com/prod/factures (remplacer par l’url recuperé au point 6)
+  -      Headers : Content-type : application/json
           Body : (raw)
 ```json
 {
