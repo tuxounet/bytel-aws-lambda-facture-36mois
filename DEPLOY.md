@@ -133,11 +133,11 @@ Entrer dans le service API Gateway
 7.      Tester dans postman
   -      URL :  https://XXXXXXXXXXX.execute-api.eu-west-1.amazonaws.com/prod/factures (remplacer par l’url recuperé au point 6)
   -      Headers : Content-type : application/json
-          Body : (raw)
-```json
-{
- "idPersonne":"80000598XXXXX"   ,
- "accessToken":"at-XXXXXXXX-XXXXX-XXXX-XXXX-XXXXXXXXX"
-}
+         Body : (raw)
+         ```json
+         {
+          "idPersonne":"80000598XXXXX"   ,
+          "accessToken":"at-XXXXXXXX-XXXXX-XXXX-XXXX-XXXXXXXXX"
+         }
 ```
  
