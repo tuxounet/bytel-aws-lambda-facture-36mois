@@ -11,7 +11,7 @@ Voici un rapide mod-op pour la mise en place de l’api sur cette lambda et son 
  
  
 Ajouter l'évènement de test :
- 
+```json
 {
   "resource": "/{proxy+}",
   "requestContext": {
@@ -69,15 +69,18 @@ Ajouter l'évènement de test :
   "path": "/path/to/resource",
   "body": "{\"accessToken\": \"at-59812595-1331-47b7-a280-358a0863304d\", \"idPersonne\":\"800005985963\"}"
 }
- 
-Retour du test attendu :
- 
+```
+
+ Retour du test attendu :
+
+```json
 {
   "headers": {
     "Access-Control-Allow-Origin": "*"
   },
   "body": "{\"isError\":true,\"errorCode\":1,\"errorSubCode\":\"GENERAL_FAILURE\",\"error\":\"\\\"Request failed with status code 401\\\"\"}"
 }
+```
  
  
 ---
@@ -86,10 +89,10 @@ Entrer dans le service API Gateway
 1.      Create API
 2.      New API
 
-Settings ;
-·         API Name : Jivaros-factures-hackathon18-api
-·         Endpoint Type : Regional
-·         Puis Create API
+        Settings ;
+        ·         API Name : Jivaros-factures-hackathon18-api
+        ·         Endpoint Type : Regional
+        ·         Puis Create API
 3.      Dans ressources
 
   a.      Cliquez sur actions > Create ressources
@@ -107,6 +110,7 @@ Settings ;
   g.      A l'avertissement d'ajout de permission, cliquer sur OK
   
 5.      Dans le verbe post
+
   a.      Faire un test avec pour request body {}
   b.      Resultat attendu :
           {
@@ -126,11 +130,10 @@ Settings ;
   a.      URL :  https://XXXXXXXXXXX.execute-api.eu-west-1.amazonaws.com/prod/factures (remplacer par l’url recuperé au point 6)
   b.      Headers : Content-type : application/json
           Body : (raw)
+          ```json
           {
           "idPersonne":"80000598XXXXX"   ,
           "accessToken":"at-XXXXXXXX-XXXXX-XXXX-XXXX-XXXXXXXXX"
           }
-  c.      Retour :
-  d.     CF PJ 'output.txt'
- 
+          ```
  
