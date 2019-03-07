@@ -31,7 +31,7 @@ Ajouter l'évènement de test :
       "cognitoIdentityPoolId": null,
       "cognitoIdentityId": null,
       "cognitoAuthenticationProvider": null,
-      "sourceIp": "5.51.203.62",
+      "sourceIp": "5.51.203.00",
       "accountId": null
     },
     "stage": "prod"
@@ -67,7 +67,7 @@ Ajouter l'évènement de test :
     "baz": "qux"
   },
   "path": "/path/to/resource",
-  "body": "{\"accessToken\": \"at-59812595-1331-47b7-a280-358a0863304d\", \"idPersonne\":\"800005985963\"}"
+  "body": "{\"accessToken\": \"at-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX\", \"idPersonne\":\"80000598XXXX\"}"
 }
 ```
 
@@ -130,10 +130,10 @@ Entrer dans le service API Gateway
   a.      URL :  https://XXXXXXXXXXX.execute-api.eu-west-1.amazonaws.com/prod/factures (remplacer par l’url recuperé au point 6)
   b.      Headers : Content-type : application/json
           Body : (raw)
-          ```json
-          {
-          "idPersonne":"80000598XXXXX"   ,
-          "accessToken":"at-XXXXXXXX-XXXXX-XXXX-XXXX-XXXXXXXXX"
-          }
-          ```
+```json
+{
+ "idPersonne":"80000598XXXXX"   ,
+ "accessToken":"at-XXXXXXXX-XXXXX-XXXX-XXXX-XXXXXXXXX"
+}
+```
  
