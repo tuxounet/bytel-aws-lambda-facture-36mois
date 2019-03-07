@@ -1,16 +1,18 @@
 Voici un rapide mod-op pour la mise en place de l’api sur cette lambda et son api
  
 ---
+
+## Ajout de la lambda
+.      Entrer dans le Service Lambda de la console AWS du compte cible
+.      Créer la fonction lambda "jivaros-factures-hackathon18"
+.      Associer un rôle jivaros-facture-hackathon18-role
+.      Utiliser le template de rôle "Generic MicroServices"
+.      Définir le handler avec la valeur suivante handler.handler
+.      Runtime : Node8.10
+.      Augmenter le timeout a 60 secondes
  
-1.      Créer la fonction lambda "jivaros-factures-hackathon18"
-2.      Associer un rôle jivaros-facture-hackathon18-role
-3.      Utiliser le template de rôle "Generic MicroServices"
-4.      Définir le handler avec la valeur suivante handler.handler
-5.      Runtime : Node8.10
-6.      Augmenter le timeout a 60 secondes
  
- 
-Ajouter l'évènement de test :
+### Ajouter l'évènement de test :
 ```json
 {
   "resource": "/{proxy+}",
