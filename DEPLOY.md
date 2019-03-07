@@ -2,7 +2,7 @@ Voici un rapide mod-op pour la mise en place de l’api sur cette lambda et son 
  
 ---
 
-## Ajout de la lambda
+## Mise en place de la fonction lambda
 1.      Entrer dans le Service Lambda de la console AWS du compte cible
 2.      Créer la fonction lambda "jivaros-factures-hackathon18"
 3.      Associer un rôle jivaros-facture-hackathon18-role
@@ -73,7 +73,9 @@ Voici un rapide mod-op pour la mise en place de l’api sur cette lambda et son 
 }
 ```
 
- Retour du test attendu :
+8.      Executer l'evenement de test 
+
+Retour du test attendu :
 
 ```json
 {
@@ -83,9 +85,9 @@ Voici un rapide mod-op pour la mise en place de l’api sur cette lambda et son 
   "body": "{\"isError\":true,\"errorCode\":1,\"errorSubCode\":\"GENERAL_FAILURE\",\"error\":\"\\\"Request failed with status code 401\\\"\"}"
 }
 ```
- 
- 
----
+
+## Mise en place du endpoint HTTP via API Gateway
+
 Entrer dans le service API Gateway
  
 1.      Create API
@@ -105,23 +107,24 @@ Entrer dans le service API Gateway
 4.      Dans la ressource factures
   a.      Cliquer sur actions > create method
   b.      Selectionner le verbe post , puis le bouton valider
-  c.       Integration type :  "lambda"
+  c.      Integration type :  "lambda"
   d.      Cocher la case "use proxy lambda integration"
   e.      Lambda function , saisir/selectionner jivaros-factures-hackathon18
-  f.        Puis cliquer sur save
+  f.      Puis cliquer sur save
   g.      A l'avertissement d'ajout de permission, cliquer sur OK
   
 5.      Dans le verbe post
 
   a.      Faire un test avec pour request body {}
   b.      Resultat attendu :
+          ```json
           {
             "isError": true,
             "errorCode": 2,
             "errorSubCode": "MISSING_ID_PERSONNE",
             "error": null
           }
- 
+          ```
 6.      Dans le menu actions
   a.      Cliquez sur "deploy api"
   b.      Deployment stage , create new stage
