@@ -93,16 +93,16 @@ Entrer dans le service API Gateway
 1.      Create API
 2.      New API
 
-        Settings ;
-        ·         API Name : Jivaros-factures-hackathon18-api
-        ·         Endpoint Type : Regional
-        ·         Puis Create API
+        Parametrage :
+        -         API Name : Jivaros-factures-hackathon18-api
+        -         Endpoint Type : Regional
+        -         Puis Create API
 3.      Dans ressources
 
-  a.      Cliquez sur actions > Create ressources
-  b.      Ressources name : factures
-  c.      Enable cors : coché
-  d.      Create ressources
+  -      Cliquez sur actions > Create ressources
+  -      Ressources name : factures
+  -      Enable cors : coché
+  -      Create ressources
   
 4.      Dans la ressource factures
   a.      Cliquer sur actions > create method
